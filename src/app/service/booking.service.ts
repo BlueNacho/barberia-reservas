@@ -23,5 +23,15 @@ export class BookingService {
     }
   }
 
-
+  finishBooking(bookingId: number, barberId: number) {
+    const barber = this.barberService.getBarber(barberId);
+    if (barber) {
+      const booking = barber.booking.pending.find(booking => booking.id === bookingId);
+      if (booking) {
+        booking.status = 'finished';
+        barber.booking.finished.push(booking);
+        barber.booking.pending = barber.booking.pending.filter(booking => booking.id !== bookingId);
+      }
+    }
+  }
 }
