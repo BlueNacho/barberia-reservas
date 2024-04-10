@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-barber-card',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./barber-card.component.scss']
 })
 export class BarberCardComponent {
+
+  
 
 }

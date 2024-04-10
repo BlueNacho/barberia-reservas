@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BarbersService } from '../service/barbers.service';
 
 @Component({
   selector: 'app-manage-bookings',
@@ -8,21 +9,8 @@ import { Component } from '@angular/core';
 
 export class ManageBookingsComponent {
 
-  barbers = [
-    {
-      name: 'Juan',
-      cel: '09999999',
-      age: 25,
-    },
-    {
-      name: 'Pedro',
-      cel: '09999999',
-      age: 25,
-    },
-    {
-      name: 'Maria',
-      cel: '09999999',
-      age: 25,
-    },
-  ];
+barbers = this.barbersService.getBarbers();
+
+constructor(private barbersService: BarbersService) { }
+  
 }
