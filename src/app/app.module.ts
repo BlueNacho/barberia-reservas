@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BarberCardComponent } from './barber-card/barber-card.component';
 import { ManageBookingsComponent } from './manage-bookings/manage-bookings.component';
+import { CancelBookingComponent } from './cancel-booking/cancel-booking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BarberCardComponent,
-    ManageBookingsComponent
+    ManageBookingsComponent,
+    CancelBookingComponent
   ],
   imports: [
     BrowserModule,
