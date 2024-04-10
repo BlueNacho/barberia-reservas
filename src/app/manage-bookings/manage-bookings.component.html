@@ -1,5 +1,5 @@
 <main class="h-100 p-3 w-100 flex-wrap d-flex flex-row align-items-start gap-3">
     <div *ngFor="let barber of barbers">
-        <app-barber-card></app-barber-card>
+        <app-barber-card [id]="barber.id" [name]="barber.name" [cel]="barber.cel" [age]="barber.age"></app-barber-card>
     </div>
 </main>

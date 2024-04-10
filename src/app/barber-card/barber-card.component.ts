@@ -7,6 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class BarberCardComponent {
 
-  
+  @Input() id: number = 0;
+  @Input() name: string = '';
+  @Input() cel: string = '';
+  @Input() age: number = 0;
 
 }
